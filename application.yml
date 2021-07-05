@@ -3,13 +3,26 @@
     active: dev
 
 ---
+server:
+  port: 8201
 spring:
   application:
-    name: msc-config-dev
+    name: msc-config-client-dev
   profiles: dev
-
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+      
 ---
+server:
+  port: 8202
 spring:
   application:
-    name: msc-config-test
+    name: msc-config-client-test
   profiles: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+      
